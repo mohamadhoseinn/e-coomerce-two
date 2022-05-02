@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 
-import Directory from "../../components/Directory/Directory";
+import Directory from "../../components/directory/Directory";
 
 const Home = () => {
   const categories = [
@@ -33,7 +33,7 @@ const Home = () => {
   return (
     <div>
       <Outlet />
-      <Directory categories={categories} />)
+      <Directory categories={categories} />
     </div>
   );
 };
