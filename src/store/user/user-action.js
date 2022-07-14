@@ -1,4 +1,4 @@
-import { USER_ACTION_TYPES } from "./user-action-types";
+import { USER_ACTION_TYPES } from "./user-types";
 import { createAction } from "../../contexts/utils/reducerUtils";
 
 export const setCurrentUser = (user) => {
