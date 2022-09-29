@@ -25,7 +25,7 @@ const removeCartItem = (cartItems, productToRemove) => {
   );
   // if found, decrement quantity
   if (exsistingCartItem?.quantity === 1) {
-    return cartItems.find((cartItem) => cartItem?.id !== productToRemove?.id);
+    return cartItems.filter((cartItem) => cartItem?.id !== productToRemove?.id);
   }
   // return new array with modified cartItems/ new cart item
   return cartItems.map((cartItem) =>
@@ -47,6 +47,7 @@ export const addItemToCart = (cartItems, productToAdd) => {
 };
 
 export const removeItemToCart = (cartItems, productToRemove) => {
+  console.log("cartItems", cartItems);
   const newCartItems = removeCartItem(cartItems, productToRemove);
   return createAction(CART_ACTION_TYPES.SET_CART_ITEMS, newCartItems);
 };
